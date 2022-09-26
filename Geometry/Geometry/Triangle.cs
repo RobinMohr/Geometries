@@ -6,19 +6,22 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    public class Circle : Geometry
+    public class Triangle : Geometry
     {
-        public Circle(int radius)
+        public Triangle(int sideA, int sideB, int height, int sideC)
         {
-            Radius = radius;
+            SideA = sideA;
+            SideB = sideB;
+            SideC = sideC;
+            Height = height;
         }
         public override double FlächenInhalt()
         {
-            return Math.PI * Radius * Radius;
+            return SideA * Height / 2 ;
         }
         public override double Umfang()
         {
-            return Radius * 2 * Math.PI;
+            return SideA + SideB + SideC;
         }
     }
 }

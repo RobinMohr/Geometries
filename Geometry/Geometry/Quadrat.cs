@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    public class Circle : Geometry
+    public class Quadrat : Geometry
     {
-        public Circle(int radius)
+        public Quadrat(int sideA)
         {
-            Radius = radius;
+            SideA = sideA;
         }
         public override double FlächenInhalt()
         {
-            return Math.PI * Radius * Radius;
+            return SideA * SideA;
         }
         public override double Umfang()
         {
-            return Radius * 2 * Math.PI;
+            return SideA * 4;
         }
     }
 }
